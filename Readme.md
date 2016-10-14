@@ -1,4 +1,4 @@
-#Autodiscovery module for Openshift 3.x & Kubernetes microservices.
+#Autodiscovery module for microservices.
 
 
 ## Features
