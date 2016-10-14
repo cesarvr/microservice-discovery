@@ -1,0 +1,14 @@
+{
+  "name": "discovery",
+  "version": "0.0.1",
+  "description": "Autodiscovery module for Openshift 3.x & Kubernetes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cvaldezr",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
