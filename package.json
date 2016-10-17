@@ -2,7 +2,8 @@
   "name": "discovery",
   "version": "0.0.1",
   "description": "Autodiscovery module for microservices",
-  "main": "index.js",
+  "main": "app.js",
+  "start": "node app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

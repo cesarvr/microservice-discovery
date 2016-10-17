@@ -26,5 +26,23 @@ describe('Testing Discovery API ', function() {
       assert.equal(svc.port, 25, 'should be equal');
   });
 
+  it('testing DNS discovery', ()=>{
+
+        assert.isFunction(discovery.searchInDNS, 'expected true');
+        return discovery.searchInDNS('localhost')
+                  .then(addr => assert.equal(addr, '127.0.0.1', 'we expect to return 127.0.0.1'))
+                  .catch((e)=>assert.isNull(e), 'no error expected in this call.');
+  });
+
+
+
+    it('testing DNS SRV Protocol discovery', ()=> {
+          assert.isFunction(discovery.searchInDNS, 'expected true');
+          return discovery.searchInDNSServ('nodejs.org').then(svc => console.log('svc->', svc));
+                  //  .then(addr => assert.equal(addr, '127.0.0.1', 'we expect to return 127.0.0.1'))
+                    //.catch((e)=>assert.isNull(e), 'no error expected in this call.');
+    });
+
+
 
 });
