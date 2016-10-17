@@ -36,12 +36,12 @@ describe('Testing Discovery API ', function() {
 
 
 
-    it('testing DNS SRV Protocol discovery', ()=> {
+    /* it('testing DNS SRV Protocol discovery', ()=> {
           assert.isFunction(discovery.searchInDNS, 'expected true');
           return discovery.searchInDNSServ('nodejs.org').then(svc => console.log('svc->', svc));
                   //  .then(addr => assert.equal(addr, '127.0.0.1', 'we expect to return 127.0.0.1'))
                     //.catch((e)=>assert.isNull(e), 'no error expected in this call.');
-    });
+    }); */
 
 
 

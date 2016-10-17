@@ -8,7 +8,7 @@ function toServiceNotation(name){
 
 function searchInEnvVars(_name){
   let evars = process.env;
-  let svcName = toServiceNotation(_name).trim();
+  let svcName = toServiceNotation(_name).toUpperCase().trim();
 
   let service = evars[svcName + '_SERVICE_HOST'];
   let port = evars[svcName + '_SERVICE_PORT'];
@@ -25,10 +25,11 @@ function searchInDNS(_name){
   });
 }
 
+// @Experimental
 function searchInDNSServ(_name){
   return new Promise((resolve, reject) => {
     let service =dns.resolveSrv(_name, (err, addr, family) => {
-        if(err) resolve(err);
+        if(err) reject(err);
         resolve(addr);
     });
   });
