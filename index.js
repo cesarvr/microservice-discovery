@@ -35,14 +35,16 @@ function searchInDNSServ(_name){
   });
 }
 
+/*
 function getService(name){
   return searchInEnvVars(name)
 }
+*/
 
 module.exports = {
   toServiceNotation: toServiceNotation,
   searchInEnvVars: searchInEnvVars,
-  getService: getService,
+  //getService: getService,
   searchInDNS: searchInDNS,
-  searchInDNSServ: searchInDNSServ
+  searchInDNSSRV: searchInDNSSRV
 };
