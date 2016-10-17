@@ -11,6 +11,7 @@ This Node module encapsulates a set of useful functions to discover nearby servi
   - Looking for services using this more robust [DNS specification](https://en.wikipedia.org/wiki/SRV_record).
 
 ## API
+
   ### discover.searchInEnvVars
     - it look for environment variables of other containers shared with your service.
 
