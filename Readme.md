@@ -10,9 +10,9 @@ This Node module encapsulates a set of useful functions to discover nearby servi
 - DNS SRV (Experimental)
   - Looking for services using this more robust [DNS specification](https://en.wikipedia.org/wiki/SRV_record).
 
-## Demo 
+## Demo
  - [Service discovery example.](https://github.com/cesarvr/microservice-discovery-demo)
- 
+
 ## API
 
   * **discover.searchInEnvVars**
@@ -43,6 +43,20 @@ discover.searchInDNS('service name'); //"172.30.228.0"
 //returns the IP address.
 // {  "service": "172.30.228.0","port": "8080" },
 discover.searchInDNSSRV('service name');  
+```
+
+* **discover.whoami**
+ - the connection details for your own service, can be handy to report to some orchestrator.   
+
+```javascript
+//return.
+discover.whoami();
+                        //  "name": "discovery",
+                        //  "info": {
+                        //    "service": "172.30.234.24",
+                        //    "port": "8080"
+                        //  }
+}
 ```
 
 ## More info

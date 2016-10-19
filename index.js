@@ -26,7 +26,7 @@ function searchInDNS(_name){
 }
 
 // @Experimental
-function searchInDNSServ(_name){
+function searchInDNSSRV(_name){
   return new Promise((resolve, reject) => {
     let service =dns.resolveSrv(_name, (err, addr, family) => {
         if(err) reject(err);
@@ -34,6 +34,16 @@ function searchInDNSServ(_name){
     });
   });
 }
+
+function whoami(){
+  let build = process.env['OPENSHIFT_BUILD_NAME'];
+    if(build){
+      let tmp = build.replace(/-\d+$/, '');
+      return { name: tmp , info: searchInEnvVars(tmp) };
+    }else
+      throw 'can\'t find openshift build name environment variable.';
+}
+
 
 /*
 function getService(name){
@@ -44,7 +54,7 @@ function getService(name){
 module.exports = {
   toServiceNotation: toServiceNotation,
   searchInEnvVars: searchInEnvVars,
-  //getService: getService,
   searchInDNS: searchInDNS,
-  searchInDNSSRV: searchInDNSSRV
+  searchInDNSSRV: searchInDNSSRV,
+  whoami: whoami
 };
