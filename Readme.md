@@ -10,6 +10,9 @@ This Node module encapsulates a set of useful functions to discover nearby servi
 - DNS SRV (Experimental)
   - Looking for services using this more robust [DNS specification](https://en.wikipedia.org/wiki/SRV_record).
 
+## Demo 
+ - [Service discovery example.](https://github.com/cesarvr/microservice-discovery-demo)
+ 
 ## API
   #### discover.searchInEnvVars
     - it look for environment variables of other containers shared with your service.

@@ -1,6 +1,6 @@
 {
-  "name": "discovery",
-  "version": "0.0.1",
+  "name": "sdiscovery",
+  "version": "0.0.5",
   "description": "Autodiscovery module for microservices",
   "main": "index.js",
   "scripts": {
