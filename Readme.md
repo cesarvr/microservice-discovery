@@ -14,7 +14,8 @@ This Node module encapsulates a set of useful functions to discover nearby servi
  - [Service discovery example.](https://github.com/cesarvr/microservice-discovery-demo)
  
 ## API
-  #### discover.searchInEnvVars
+
+  * **discover.searchInEnvVars**
     - it look for environment variables of other containers shared with your service.
 
 ```javascript
@@ -24,7 +25,7 @@ This Node module encapsulates a set of useful functions to discover nearby servi
   discover.searchInEnvVars('service name');
 ```
 
-  #### discover.searchInDNS
+ * **discover.searchInDNS**
   - if for some reason environment variables are not shared, this method allow you to lookup the service name in the DNS.  
   - return an object with IP address and port.
 
@@ -34,7 +35,7 @@ This Node module encapsulates a set of useful functions to discover nearby servi
 discover.searchInDNS('service name'); //"172.30.228.0"
 ```
 
-  #### discover.searchInDNS
+ * **discover.searchInDNS**
   - if for some reason environment variables are not shared, this method allow you to lookup the service name in the DNS.  
   - return a promise, with IP address if fulfilled, or error.
 
