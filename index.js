@@ -12,12 +12,15 @@ function searchInEnvVars(_name){
 
   let service = evars[svcName + '_SERVICE_HOST'];
   let port = evars[svcName + '_SERVICE_PORT'];
-  
-  let user  = evars[svcName + '_USER'];  
-  let passw = evars[svcName + '_PASSWORD'];  
 
-  if(typeof user !== 'undefined' && typeof passw !== 'undefined')
-    return {service:service, port: port, user:user, password:passw};
+  let user  = evars[svcName + '_USER'];
+  let passw = evars[svcName + '_PASSWORD'];
+  let dbname = evars[svcName + '_DATABASE'];
+
+  if(typeof user !== 'undefined' &&
+     typeof passw !== 'undefined' &&
+     typeof dbname !== 'undefined')
+    return {service:service, port: port, user:user, password:passw, db: dbname};
 
   return {service:service, port: port};
 }
